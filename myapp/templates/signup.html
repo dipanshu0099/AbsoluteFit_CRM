@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<!-- <h1 style="background-color: red !important;" class="bg-success">Signup page</h1>
+ -->
+
+<h1>New User Registration</h1>
+
+<form method="post">{% csrf_token %}
+	First Name: <input class="form-control" type="text" name="first_name" autocomplete="off" autofocus required><br>
+	Last Name: <input class="form-control" type="text" autocomplete="off" name="last_name"><br>
+	Email: <input class="form-control" type="email" name="email" autocomplete="off" required><br>
+	<!-- Username: <input type="text" name="username"> -->
+	Password: <input class="form-control" type="password" name="password" required><br>
+	<input type="submit" value="Submit" class="btn btn-success"/> <br>
+</form>
+
+{% endblock %}
